@@ -14,5 +14,7 @@ movies_sheet3.head()
 
 movies = pd.concat([movies_sheet1, movies_sheet2, movies_sheet3])
 
-movies['IMDB Score'].plot(kind="hist")
+ax = movies['IMDB Score'].plot(kind="hist")
+ax.set_xlabel("Ratings")
+
 plt.show()
